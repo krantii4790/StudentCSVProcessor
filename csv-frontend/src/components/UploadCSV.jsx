@@ -26,9 +26,9 @@ function UploadCSV() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:8080/api/csv/upload",
-        formData,
-        { responseType: "blob" }
+           "https://opulent-broccoli-pjvp99v6rvjvf7r5g-8080.app.github.dev/api/csv/upload",
+         formData,
+         { responseType: "blob" }
       );
 
       const url = window.URL.createObjectURL(new Blob([response.data]));
